@@ -1,1 +1,245 @@
-"body { display: flex; align-items: center; justify-content: center; height:150 vh; background-color: rgba (168, 167, 167, 0.6); } /*Create the card container*/ .birthdayCard { position: relative; width: 250 px; height:350 px; cursor: pointer; transform-style: preserve-3d; transform: perspective (2500 px); transition: 4 s; } .birthdayCard:hover { transform: perspective (2500 px) rotate (5 deg); box-shadow: inset 100 px 20 px 100 px rgba (0,0,0,.15), 0 10 px 100 px rgba (0,0,0,0.3); } .birthdayCard:hover .cardFront { transform: rotateY (-160 deg); } .birthdayCard:hover .front-text { display: none; } /*pode remover se quiser deixar o desenho*/ .birthdayCard:hover .wrap-deco { display: none; } /**********/ .birthdayCard:hover .wrap-decoTwo { display: none; } /*pode remover se quiser deixar o bolo*/ .birthdayCard:hover .plate { display: none; } /**********/ /*Style the front of the card*/ .cardFront { position: relative; background-color: rgb (255, 246, 246); width: 250 px; height:350 px; overflow: hidden; transform-origin: left; box-shadow: inset 100 px 20 px 100 px rgba (0,0,0,.13), 30 px 0 50 px rgba (0,0,0,0.1); transition: .4 s; } .happy, .toyou { position: relative; font-family: didot; text-align: center; backface-visibility: hidden; font-size: 30 px; } .happy { top:198 px; } .toyou { top:123 px; } .bday { position: relative; font-family: arial; font-size: 30 px; text-align: center; top:163 px; } .wrap-deco { position: absolute; top:-230 px; left:-200 px; } .decorations { position: absolute; width: 400 px; height: 300 px; border: 3 px solid #333; border-radius: 50 %; } .decorations:before, .decorations:after, .decorationsTwo:before, .decorationsTwo:after, .decorationsThree:before, .decorationsThree:after { content:""; position: absolute; border-left: 20 px solid transparent; border-right: 20 px solid transparent; width:0; height:0; } .decorations:before { border-top: 40 px solid #f15bb5; top:297 px; left:210 px; transform: rotate (-5 deg); } .decorations:after{ border-top: 40 px solid #f4d35e; top:288 px; left:260 px; transform: rotate (-17 deg); } .decorationsTwo:before { border-top: 40 px solid #00f5d4; top:268 px; left:315 px; transform: rotate (-30 deg); } .decorationsTwo:after, .decorationsThree:after { border-top: 40 px solid #9b5de5; top:238 px; left:355 px; transform: rotate (-40 deg); } .wrap-decoTwo { transform: scaleX (-1); position: absolute; top:-230 px; left:445 px; } .decorationsThree:before { border-top: 40 px solid #00bbf9; top:268 px; left:315 px; transform: rotate (-30 deg); } .plate { position: absolute; width: 130 px; height: 5 px; background-color: #00bbf9; left:60 px; top:213 px; } .cake { position: absolute; overflow: hidden; width:100 px; height: 50 px; background-color: #f15bb5; border-radius: 10 px 10 px 0 0; top:-50 px; left:15 px; box-shadow: inset 0 -15 px #f9c74f, inset 0 15 px #432818; } .cake:before { content:""; position: absolute; background-color: #432818; width:10 px; height:20 px; top:5 px; border-radius:20 px; box-shadow: 10 px 5 px #f15bb5, 20 px 0 px #432818, 30 px 2 px #f15bb5, 40 px 5 px #432818, 50 px 5 px #f15bb5, 60 px 0 px #432818, 70 px 5 px #f15bb5, 80 px 5 px #432818, 90 px 5 px #f15bb5; } .plate:before { content:""; position: absolute; background: repeating-linear-gradient (-45 deg, #9b5de5, #9b5de5 3 px, #00f5d4 3 px, #00f5d4 6 px); width:7 px; height: 25 px; top:-75 px; left:61 px; } .plate:after { content:""; position: absolute; width:1 px; height: 5 px; background-color: #333; top:-80 px; left:64 px; } .flame { position: absolute; background-color: #fb5607; border-radius: 80 % 0 55 % 50 % / 55 % 0 80 % 50 %; transform: rotate (-45 deg); width:15 px; height:15 px; opacity:0.7; top:-93 px; left:57 px; } /*Style the inside part of the card*/ .cardInside { position: absolute; background-color: #fff; width: 250 px; height:350 px; z-index:-1; left:0; top:0; box-shadow: inset 100 px 20 px 100 px rgba (0,0,0,0.2); } .inside-text { position: relative; top:-160 px; transform: scale (0.7); } .wishes { position: relative; top:-100 px; margin: 25 px; } p { font-family: 'Brush Script MT'; color: #333; } .name { margin-left:150 px; }"
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:150 vh;
+    background-color: rgba (168, 167, 167, 0.6);
+  }
+  /*Create the card container*/
+  .birthdayCard {
+    position: relative;
+    width: 250 px;
+    height:350 px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform: perspective (2500 px);
+    transition: 4 s;
+  }
+  
+  .birthdayCard:hover {
+      transform: perspective (2500 px)  rotate (5 deg);
+      box-shadow: inset 100 px 20 px 100 px rgba (0,0,0,.15), 0 10 px 100 px rgba (0,0,0,0.3);
+  }
+  
+  .birthdayCard:hover .cardFront {
+    transform: rotateY (-160 deg); 
+  }
+  
+  .birthdayCard:hover .front-text {
+    display: none;
+  }
+  
+  /*pode remover se quiser deixar o desenho*/
+  .birthdayCard:hover .wrap-deco {
+    display: none;
+  }
+  /**********/
+
+  .birthdayCard:hover .wrap-decoTwo {
+    display: none;
+  }
+
+  /*pode remover se quiser deixar o bolo*/
+  .birthdayCard:hover .plate {
+    display: none;
+  }
+   /**********/
+
+  /*Style the front of the card*/
+  .cardFront {
+    position: relative;
+    background-color: rgb (255, 246, 246);
+    width: 250 px;
+    height:350 px;
+    overflow: hidden;
+    transform-origin: left;
+    box-shadow: inset 100 px 20 px 100 px rgba (0,0,0,.13), 30 px 0 50 px rgba (0,0,0,0.1);
+    transition: .4 s;
+  }
+  
+  .happy, .toyou {
+    position: relative;
+    font-family: didot;
+    text-align: center;
+    backface-visibility: hidden;
+    font-size: 30 px; 
+  }
+  
+  .happy {
+    top:198 px;
+  }
+  
+  .toyou {
+    top:123 px;
+  }
+  
+  .bday {
+    position: relative;
+    font-family: arial;
+    font-size: 30 px;
+    text-align: center;
+    top:163 px;
+  }
+  
+  .wrap-deco {
+    position: absolute;
+    top:-230 px;
+    left:-200 px;
+  }
+  
+  .decorations {
+    position: absolute;
+    width: 400 px;
+    height: 300 px;
+    border: 3 px solid #333;
+    border-radius: 50 %;
+  }
+  
+  .decorations:before, .decorations:after, .decorationsTwo:before, .decorationsTwo:after, .decorationsThree:before, .decorationsThree:after {
+    content:"";
+    position: absolute;
+    border-left: 20 px solid transparent;
+    border-right: 20 px solid transparent;
+    width:0;
+    height:0;
+  }
+  
+  .decorations:before {
+    border-top: 40 px solid #f15bb5;
+    top:297 px;
+    left:210 px;
+    transform: rotate (-5 deg);
+  }
+  
+  .decorations:after{
+    border-top: 40 px solid #f4d35e;
+    top:288 px;
+    left:260 px;
+    transform: rotate (-17 deg);
+  }
+  
+  .decorationsTwo:before {
+    border-top: 40 px solid #00f5d4;
+    top:268 px;
+    left:315 px;
+    transform: rotate (-30 deg);
+  }
+  
+  .decorationsTwo:after, .decorationsThree:after {
+    border-top: 40 px solid #9b5de5;
+    top:238 px;
+    left:355 px;
+    transform: rotate (-40 deg);
+  }
+  
+  .wrap-decoTwo {
+    transform: scaleX (-1);
+    position: absolute;
+    top:-230 px;
+    left:445 px; 
+  }
+  
+  .decorationsThree:before {
+    border-top: 40 px solid #00bbf9;
+    top:268 px;
+    left:315 px;
+    transform: rotate (-30 deg);
+  }
+  
+  .plate {
+    position: absolute;
+    width: 130 px;
+    height: 5 px;
+    background-color: #00bbf9;
+    left:60 px;
+    top:213 px;
+  }
+  
+  .cake {
+    position: absolute;
+    overflow: hidden;
+    width:100 px;
+    height: 50 px;
+    background-color: #f15bb5;
+    border-radius: 10 px 10 px 0 0;
+    top:-50 px;
+    left:15 px;
+    box-shadow: inset 0 -15 px #f9c74f, inset 0 15 px #432818;
+  }
+  
+  .cake:before {
+    content:"";
+    position: absolute;
+    background-color: #432818;
+    width:10 px;
+    height:20 px;
+    top:5 px;
+    border-radius:20 px;
+    box-shadow: 10 px 5 px #f15bb5, 20 px 0 px #432818, 30 px 2 px #f15bb5, 40 px 5 px #432818, 50 px 5 px #f15bb5, 60 px 0 px #432818, 70 px 5 px #f15bb5, 80 px 5 px #432818, 90 px 5 px #f15bb5;
+  }
+  
+  .plate:before {
+    content:"";
+    position: absolute;
+    background: repeating-linear-gradient (-45 deg, #9b5de5, #9b5de5 3 px, #00f5d4 3 px, #00f5d4 6 px);
+    width:7 px;
+    height: 25 px;
+    top:-75 px;
+    left:61 px;
+  }
+  
+  .plate:after {
+    content:"";
+    position: absolute;
+    width:1 px;
+    height: 5 px;
+    background-color: #333;
+    top:-80 px;
+    left:64 px;
+  }
+  
+  
+  .flame {
+    position: absolute;
+    background-color: #fb5607;
+    border-radius: 80 % 0 55 % 50 % / 55 % 0 80 % 50 %;
+    transform: rotate (-45 deg);
+    width:15 px;
+    height:15 px;
+    opacity:0.7;
+    top:-93 px;
+    left:57 px;
+  }
+
+  /*Style the inside part of the card*/
+  .cardInside {
+    position: absolute;
+    background-color: #fff;
+    width: 250 px;
+    height:350 px;
+    z-index:-1;
+    left:0;
+    top:0;
+    box-shadow: inset 100 px 20 px 100 px rgba (0,0,0,0.2);
+  }
+  
+  .inside-text {
+    position: relative;
+    top:-160 px;
+    transform: scale (0.7);
+  }
+  
+  .wishes {
+    position: relative;
+    top:-100 px;
+    margin: 25 px;
+  }
+  
+  p {
+    font-family: 'Brush Script MT';
+    color: #333;
+  }
+  
+  .name {
+    margin-left:150 px;
+  }
